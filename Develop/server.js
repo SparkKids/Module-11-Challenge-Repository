@@ -10,7 +10,8 @@ const { readFromFile, readAndAppend } = require('./helpers/fsUtils');
 // Helper method for generating unique ids
 const uuid = require('./helpers/uuid');
 
-const PORT = 3001;
+//process.env.PORT allows heroku to assign a port.
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
